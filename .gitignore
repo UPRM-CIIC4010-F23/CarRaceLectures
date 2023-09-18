@@ -1,0 +1,12 @@
+obj/osx/Release/src/*.d
+obj/osx/Release/src/*.o
+bin/CarRaceLecturesF23.app/Contents/Info.plist
+openFrameworks-Info.plist
+.vscode/browse.db
+.vscode/browse.db-shm
+.vscode/browse.db-wal
+bin/CarRaceLecturesF23.app/Contents/Frameworks/libfmod.dylib
+bin/CarRaceLecturesF23.app/Contents/MacOS/CarRaceLecturesF23
+CarRaceLecturesF23.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+bin/data/.gitkeep
+obj/osx/Release/.compiler_flags
