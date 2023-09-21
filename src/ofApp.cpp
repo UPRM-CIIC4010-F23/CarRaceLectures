@@ -8,8 +8,14 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    if ((c1.getXPos() + 60) <= ofGetWidth()) {
+    if ((c1.getDirection() == 1) && (c1.getXPos() + 60) > ofGetWidth()) {
+        c1.setDirection(-1);
+    } else if ((c1.getDirection() == -1) && (c1.getXPos() <= 0)) {
+        c1.setDirection(1);
+    } else if (c1.getDirection() == 1) {
         c1.move(3,0);
+    } else {
+        c1.move(-3,0);
     }
 }
 
