@@ -8,11 +8,11 @@ void Car::move(int deltaX, int deltaY){
     this->yPos += deltaY;
 };
 
-void Car::draw() {
+void Car::draw(ofColor c) {
 
     int xPos = this->getXPos();
     int yPos = this->getYPos();
-    ofSetColor(ofColor::green);
+    ofSetColor(c);
     // Draw body
     ofDrawRectangle(xPos+0,yPos+10,60,10);
     // Draw roof
@@ -23,5 +23,11 @@ void Car::draw() {
     // Draw tires
     ofDrawCircle(xPos+15,yPos+25,5);
     ofDrawCircle(xPos+45,yPos+25,5);
+
+}
+
+void Car::draw() {
+
+    draw(ofColor::green);
 
 }

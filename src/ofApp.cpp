@@ -9,7 +9,7 @@ void ofApp::setup(){
     static int numCars = 15;
     int laneY = 0;
     for (int i=0; i<numCars; i++) {
-        cars.push_back(Car(0,laneY));
+        cars.push_back(Car(0,laneY, ofColor::green));
         laneY += 40;
     }
     someCarFinished = false;
@@ -37,18 +37,24 @@ void ofApp::update(){
             someCarFinished = true;
         }
     }
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-    int i;
     for (int i = 0; i < cars.size(); i++) {
         cars[i].draw();
     }
-    // Car(100,100).draw();
-    // Car(50,50).draw();
-    // Car(ofGetWidth()-60,ofGetHeight()-30).draw();
+
+    int leaderIdx = 0;
+    for (int i = 1; i < cars.size(); i++) {
+        if (cars[i].getXPos() >= cars[leaderIdx].getXPos()) {
+            leaderIdx = i;
+        }
+    }
+
+    cars[leaderIdx].draw(ofColor::yellow);
 
 }
 
