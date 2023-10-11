@@ -27,7 +27,7 @@ class ofApp : public ofBaseApp{
 		
 		// Car c1 = Car(0,0);
 
-		vector<Car> cars;
+		vector<Car*> cars;
 
 		bool someCarFinished;
 		

@@ -26,7 +26,7 @@ class Car {
     
     Car(int x, int y, ofColor c) { xPos = x; yPos = y; direction = 1; speed = 5; color = c; }
 
-    void draw();
-    void draw(ofColor c);
+    virtual void draw();
+    virtual void draw(ofColor c);
 
 };
