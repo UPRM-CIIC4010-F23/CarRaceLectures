@@ -12,7 +12,16 @@ void PoliceCar::draw(ofColor c) {
 
     // Draw Stobe Light
     // ofFill();
+    this->update();
+    if (timeToNextBlink == 0) {
+        strobeOn = !strobeOn;
+        setTimeToNextBlink(30);
+    }
+    if (!strobeOn) {
+        ofNoFill();
+    }
     ofDrawCircle(xPos+28,yPos-4,2);
+    ofFill();
 
 }
 
