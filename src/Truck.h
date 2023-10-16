@@ -4,11 +4,11 @@
 
 using namespace std;
 
-class Car : public Vehicle {
+class Truck : public Vehicle {
 
     public:
     
-    Car(int x, int y, ofColor c) : Vehicle(x,y,c) {}
+    Truck(int x, int y, ofColor c) : Vehicle(x,y,c) {}
 
     virtual void draw();
     virtual void draw(ofColor c);
