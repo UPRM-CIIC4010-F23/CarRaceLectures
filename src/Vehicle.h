@@ -1,9 +1,10 @@
 #pragma once
 #include "ofMain.h"
+#include "Raceable.h"
 
 using namespace std;
 
-class Vehicle {
+class Vehicle : public Raceable {
 
     private:
     int xPos;
