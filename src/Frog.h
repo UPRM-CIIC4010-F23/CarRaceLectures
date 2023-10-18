@@ -2,10 +2,11 @@
 
 #include "ofMain.h"
 #include "Raceable.h"
+#include "Animal.h"
 
 using namespace std;
 
-class Frog : public Raceable {
+class Frog : public Raceable, public Animal {
     
 private: 
 
@@ -30,5 +31,8 @@ public:
 
     virtual void draw();
     virtual void draw(ofColor c);
+
+    virtual string makeNoise() { return "Croc"; };
+    virtual string eat() { return "Yummy"; };
 
 };
