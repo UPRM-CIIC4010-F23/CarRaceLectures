@@ -3,6 +3,7 @@
 #include "Car.h"
 #include "PoliceCar.h"
 #include "Truck.h"
+#include "Frog.h"
 
 using namespace std;
 
@@ -11,12 +12,14 @@ void ofApp::setup(){
     static int numCars = 15;
     int laneY = 10;
     for (int i=0; i<numCars; i++) {
-        if (i % 3 == 0) {
+        if (i % 4 == 0) {
             cars.push_back(new Car(0,laneY, ofColor::green));
-        } else if (i % 3 == 1) {
+        } else if (i % 4 == 1) {
             cars.push_back(new Truck(0,laneY, ofColor::green));            
+        } else if (i % 4 == 2) {
+            cars.push_back(new PoliceCar(0,laneY, ofColor::green)); 
         } else {
-            cars.push_back(new PoliceCar(0,laneY, ofColor::green));
+            cars.push_back(new Frog(0,laneY));
         }
         laneY += 40;
     }

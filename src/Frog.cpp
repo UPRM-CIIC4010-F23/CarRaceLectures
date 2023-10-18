@@ -18,7 +18,7 @@ void Frog::draw(ofColor c) {
 
     int xPos = this->getXPos();
     int yPos = this->getYPos();
-    image.draw(xPos, yPos, 20, 20);
+    image.draw(xPos, yPos, 40, 40);
 
 }
 
