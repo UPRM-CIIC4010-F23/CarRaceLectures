@@ -1,31 +1,18 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Raceable.h"
+#include "RaceableImpl.h"
 #include "Animal.h"
 
 using namespace std;
 
-class Frog : public Raceable, public Animal {
+class Frog : public RaceableImpl, public Animal {
     
 private: 
-
-    int coords[2];
-    int speed;
 
     ofImage image;
 
 public:
-
-    int getXPos() { return coords[0]; }
-    int getYPos() { return coords[1]; }
-    int getDirection() { return 1; }
-    int getSpeed() { return 5; }
-    ofColor getColor() { return ofColor::green; }
-
-    void move(int deltaX, int deltaY);
-    void setDirection(int dir) { }
-    void setSpeed(int s) { speed = s; }
 
     Frog(int x, int y);
 

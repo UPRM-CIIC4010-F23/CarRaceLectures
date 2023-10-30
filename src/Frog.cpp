@@ -1,18 +1,13 @@
 #include "Frog.h"
+#include "RaceableImpl.h"
 
 using namespace std;
 
-Frog::Frog(int x, int y) {
-     coords[0]=x; 
-     coords[1] = y; 
+Frog::Frog(int x, int y) : RaceableImpl(x,y,ofColor::green) {
+
      image.load("Frog.png");
 
 }
-
-void Frog::move(int deltaX, int deltaY){
-    this->coords[0] += deltaX;
-    this->coords[1] += deltaY;
-};
 
 void Frog::draw(ofColor c) {
 

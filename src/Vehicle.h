@@ -1,31 +1,14 @@
 #pragma once
 #include "ofMain.h"
-#include "Raceable.h"
+#include "RaceableImpl.h"
 
 using namespace std;
 
-class Vehicle : public Raceable {
-
-    private:
-    int xPos;
-    int yPos;
-    int direction; // 1 -> left to right, 2 -> right to left
-    int speed;
-    ofColor color;
+class Vehicle : public RaceableImpl {
 
     public:
-    int getXPos() { return xPos; }
-    int getYPos() { return yPos; }
-    int getDirection() { return direction; }
-    int getSpeed() { return speed; }
-    ofColor getColor() { return color; }
 
-    void move(int deltaX, int deltaY);
-    void setDirection(int dir) { direction = dir; }
-    void setSpeed(int s) { speed = s; }
-
-    
-    Vehicle(int x, int y, ofColor c) { xPos = x; yPos = y; direction = 1; speed = 5; color = c; }
+    Vehicle(int x, int y, ofColor c) : RaceableImpl(x,y,c) { }
 
     virtual void draw() = 0;  // Pure virtual method
     virtual void draw(ofColor c) = 0;
